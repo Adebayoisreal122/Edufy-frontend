@@ -1,0 +1,98 @@
+
+
+
+
+*{
+  background-color: #212529;
+  color: white;
+}
+.navbar{
+  color: white;
+position: fixed;
+  top: 0;
+}
+
+.navbar-brand {
+  font-size: 36px; /* Adjust font size as needed */
+  color: rgb(80, 139, 223); /* Initial text color */
+  text-shadow: 0 0 15px rgb(27, 169, 231); /* Initial text shadow */
+  animation: glow 1s infinite alternate; /* Adjust duration and animation as needed */
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px rgb(37, 16, 222); /* Initial text shadow */
+  }
+  to {
+    text-shadow: 20 10 10px rgb(202, 201, 223); /* Final text shadow */
+  }
+}
+.dropdown-item:hover{
+  background:none;
+}
+
+.homi{
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.761) 0%, rgba(0, 0, 0, 0.5) 100%), url("./src/assets/images/freemium.jpg"), lightgray 0px -65.191px / 100% 178.109% no-repeat;
+  position: relative;
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+@media screen and (max-width: 768px) {
+  .homi {
+    background-size: auto; /* Adjust background size for smaller screens */
+  }
+}
+.hom {background: none;}
+
+
+
+
+
+/* MARQUEE CSS */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.marquee {
+  overflow: hidden;
+}
+
+.marquee-content {
+  display: flex;
+  justify-content: flex-end;
+  animation: scrolling 20s linear infinite;
+}
+
+.marquee-item {
+  flex: 0 0 16vw;
+  margin: 0 1vw;
+/*   flex: 0 0 20vw; */
+/*   margin: 0 2vw; */
+}
+
+.marquee-item img {
+  display: block;
+  width: 100%;
+/*   padding: 0 20px; */
+}
+
+@keyframes scrolling {
+  0% { transform: translateX(150%); }
+  100% { transform: translateX(-100%); }
+}
+
+
+
+
+
+
+.mt{
+  margin-top: 100px;
+}
