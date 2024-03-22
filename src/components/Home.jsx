@@ -22,42 +22,7 @@ const Home = () => {
       </div>
     </div>
 
-<div className="marquee">
-  <div className="marquee-content"> 
-    <div className="marquee-item">
-      <img src="https://via.placeholder.com/600/000000/FFFFFF/?text=01" alt=""/>
-    </div>
-    
-    <div className="marquee-item">
-      <img src="https://via.placeholder.com/600/000000/FFFFFF/?text=02" alt=""/>
-    </div>
-    
-    <div className="marquee-item">
-      <img src="https://via.placeholder.com/600/000000/FFFFFF/?text=03" alt=""/>
-    </div>
-    
-    <div className="marquee-item">
-      <img src="https://via.placeholder.com/600/000000/FFFFFF/?text=04" alt=""/>
-    </div>
-    
-    <div className="marquee-item">
-      <img src="https://via.placeholder.com/600/000000/FFFFFF/?text=05" alt=""/>
-    </div>
-    
-    <div className="marquee-item">
-      <img src="https://via.placeholder.com/600/000000/FFFFFF/?text=06" alt=""/>
-    </div>
-    
-    <div className="marquee-item">
-      <img src="https://via.placeholder.com/600/000000/FFFFFF/?text=07" alt=""/>
-    </div>
-    
-    <div className="marquee-item">
-      <img src="https://via.placeholder.com/600/000000/FFFFFF/?text=08" alt=""/>
-    </div>
 
-  </div>
-</div>
 
 
 

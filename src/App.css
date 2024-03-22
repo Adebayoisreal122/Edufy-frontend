@@ -64,6 +64,10 @@ position: fixed;
   background: linear-gradient(180deg, rgba(27, 26, 26, 0.761) 0%, rgba(0, 0, 0, 0.5) 100%);
   z-index: 1;
 }
+.learn{
+  margin-top: 150px;
+}
+
 
 /* Your other styles for .hom, .container-fluid, .row, .col, etc. */
 
@@ -90,9 +94,6 @@ position: fixed;
 .hom {background: none;
       
 }
-.learn{
-  margin-top: 200px;
-}
 
 
 
@@ -107,39 +108,6 @@ body {
   margin: 0;
 }
 
-.marquee {
-  overflow: hidden;
-}
-
-.marquee-content {
-  display: flex;
-  justify-content: flex-end;
-  animation: scrolling 20s linear infinite;
-}
-
-.marquee-item {
-  flex: 0 0 16vw;
-  margin: 0 1vw;
-/*   flex: 0 0 20vw; */
-/*   margin: 0 2vw; */
-}
-
-.marquee-item img {
-  display: block;
-  width: 100%;
-/*   padding: 0 20px; */
-}
-
-@keyframes scrolling {
-  0% { transform: translateX(150%); }
-  100% { transform: translateX(-100%); }
-}
 
 
 
-
-
-
-.mt{
-  margin-top: 100px;
-}

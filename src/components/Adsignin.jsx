@@ -28,7 +28,7 @@ const Adsignin = () => {
   return (
     <>
 
-<div className="container">
+<div className="container my-5">
     <div className="row justify-content-center">
         <div className="col-lg-6">
             <div className="position-relative border border-info p-5 rounded rounded-4">
