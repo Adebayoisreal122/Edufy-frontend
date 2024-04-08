@@ -4,12 +4,15 @@ import { Link } from 'react-router-dom';
 
 const Studentsignup = () => {
 
-
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  let URL = "http://localhost:3000/usersignup";
+  const [firstName, setFirstName] = useState("");
+  const [secondName, setSecondName] = useState("");
+  const [userName, setUserName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleSignUp = () => {
-    axios.post('/api/signup', { email, password })
+    axios.post(URL, {firstName, secondName, userName, email, password })
       .then(response => {
         // Handle successful sign-up, e.g., show a success message to the user
         console.log(response.data.message);

@@ -4,14 +4,18 @@ import { Link } from 'react-router-dom';
 
 const Adsignup = () => {
 
+  let URL = "http://localhost:3000/adminsignup";
 
 
 
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [firstName, setFirstName] = useState("");
+  const [secondName, setSecondName] = useState("");
+  const [userName, setUserName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleSignUp = () => {
-    axios.post('/api/signup', { email, password })
+    axios.post(URL, { firstName, secondName, userName, email, password })
       .then(response => {
         // Handle successful sign-up, e.g., show a success message to the user
         console.log(response.data.message);
@@ -39,7 +43,7 @@ const Adsignup = () => {
                     <div className="mb-3">
                         <label htmlFor="exampleInputEmail1" className="form-label" onChange={e => setEmail(e.target.value)} >Email address</label>
                         <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
-                        <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
+                        <div id="emailHelp" className=" text-info form-text">We'll never share your email with anyone else.</div>
                     </div>
                     <div className="mb-3">
                         <label htmlFor="exampleInputPassword1" className="form-label"  onChange={e => setPassword(e.target.value)}  >Password</label>

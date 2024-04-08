@@ -4,13 +4,14 @@ import { Link } from 'react-router-dom';
 
 const Adsignin = () => {
 
+  let URL = "http://localhost:3000/adminsignin";
 
 
   const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
   
     const handleSignIn = () => {
-      axios.post('/api/signin', { email, password })
+      axios.post(URL, { email, password })
         .then(response => {
           // Handle successful sign-in, e.g., redirect to dashboard
           console.log(response.data.message);
@@ -38,7 +39,7 @@ const Adsignin = () => {
                     <div className="mb-3">
                         <label htmlFor="exampleInputEmail1" className="form-label" onChange={e => setEmail(e.target.value)} >Email address</label>
                         <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
-                        <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
+                        <div id="emailHelp" className="  text-info form-text">We'll never share your email with anyone else.</div>
                     </div>
                     <div className="mb-3">
                         <label htmlFor="exampleInputPassword1" className="form-label"  onChange={e => setPassword(e.target.value)}  >Password</label>
