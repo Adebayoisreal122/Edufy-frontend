@@ -15,6 +15,8 @@ const Navbar = () => {
 
   return (
     <>
+    <div className='navba'>
+
     <nav className="navbar navbar-expand-lg  text-light fixed-top" >
   <div className="container-fluid navbar justify-content-center">
     <h1 className="navbar-brand  ms-5" href="#">Edufy</h1>
@@ -22,7 +24,7 @@ const Navbar = () => {
       <span className="navbar-toggler-icon"> ...</span>
     </button>
     <div className="collapse  navbar-collapse justify-content-center" id="navbarSupportedContent">
-      <ul className=" navbar-nav">
+      <ul className=" navi navbar-nav">
         <li className="nav-item">
           <a className="nav-link active text-light" aria-current="page" href="#">About us</a>
         </li>
@@ -40,9 +42,9 @@ const Navbar = () => {
         </li>
       </ul>
     </div>
-      <button className="btn btn-outline-success text-light" type="submit">Search</button>
   </div>
 </nav>
+    </div>
 
 
     </>

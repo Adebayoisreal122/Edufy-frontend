@@ -3,8 +3,12 @@
 
 
 *{
-  background-color: #212529;
-  color: white;
+  background-color: #dadfe9;
+  color: rgb(17, 17, 17);
+  
+}
+.navi{
+  background: none !important;
 }
 .navbar{
   color: white;
@@ -15,9 +19,14 @@ position: fixed;
 
 .navbar-brand {
   font-size: 36px;
+  background: none;
   color: rgb(80, 139, 223); 
   text-shadow: 0 0 15px rgb(27, 169, 231); 
   animation: glow 2s infinite alternate;
+}
+
+.collapse{
+  background: none;
 }
 
 @keyframes glow {
