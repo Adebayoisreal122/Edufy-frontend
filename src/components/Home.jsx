@@ -9,7 +9,7 @@ const Home = () => {
     <>
 <div className='homi p-5 mt-5'>
       <video autoPlay muted loop id="video-background">
-        <source src={'/public/videos/file.mp4'} type="video/mp4" />
+        <source src={'./public/videos/file.mp4'} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div className="container-fluid text-center gradient-overlay">
