@@ -10,6 +10,7 @@
   color: white;
 position: fixed;
   top: 0;
+  background-color: rgba(17, 16, 16, 0.589);
 }
 
 .navbar-brand {
@@ -37,7 +38,7 @@ position: fixed;
 .homi {
   position: relative;
   overflow: hidden;
-  height: 60vh;
+  height: 100vh;
 }
 
 #video-background {
@@ -62,11 +63,11 @@ position: fixed;
 }
 
 
-/* Your other styles for .hom, .container-fluid, .row, .col, etc. */
+
 
 @media screen and (max-width: 768px) {
   .homi {
-    background-size: auto; /* Adjust background size for smaller screens */
+    background-size: auto; 
   }
   .learn{
     margin-top: 50px;
