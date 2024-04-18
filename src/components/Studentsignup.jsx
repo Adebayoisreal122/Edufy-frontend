@@ -26,26 +26,32 @@ const Studentsignup = () => {
 
   return (
     <>
-  <div className="container my-5">
-    <div className="row justify-content-center">
-        <div className="col-lg-6">
-            <div className="position-relative border border-info p-5 rounded rounded-4">
-                <h1 className='text-center mb-4'>Sign Up here</h1>
+  <div className="container  my-5">
+    <div className="row  justify-content-center">
+        <div className=" col-lg-6">
+            <div className="position-relative border bg-dark border-info p-5 rounded rounded-4">
+                <h1 className='text-center bg-dark text-light  mb-4'>Sign Up here</h1>
 
-                <form>
-                    <div className="mb-3">
-                        <label htmlFor="exampleInputEmail1" className="form-label" onChange={e => setEmail(e.target.value)} >Email address</label>
-                        <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
-                        <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
+                <form className='bg-dark'>
+                    <div className="mb-3 bg-dark">
+                        <label htmlFor="exampleInputEmail1" className=" bg-dark text-light form-label" onChange={e => setEmail(e.target.value)} >Email address</label>
+                        <input type="email" className=" bg-dark form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+                        <div id="emailHelp" className=" bg-dark  text-info form-text">We'll never share your email with anyone else.</div>
                     </div>
-                    <div className="mb-3">
-                        <label htmlFor="exampleInputPassword1" className="form-label"  onChange={e => setPassword(e.target.value)}  >Password</label>
-                        <input type="password" className="form-control" id="exampleInputPassword1"/>
+                    <div className=" bg-dark mb-3">
+                        <label htmlFor="exampleInputPassword1" className=" bg-dark form-label"  onChange={e => setPassword(e.target.value)}  >Password</label>
+                        <input type="password" className=" bg-dark form-control" id="exampleInputPassword1"/>
                     </div>
-                    <div className="mb-3 form-check">
-                        <p>Already have an account? <Link to={"/"}>Sign in here</Link></p>
+                   
+
+                    <div className=" bg-dark form-check">
+                        <p className='bg-dark text-light'>You don't have an account? <Link to={"/"} className='bg-dark '>Sign up here</Link></p>
                     </div>
-                    <button type="submit" className="btn btn-primary"  onClick={handleSignUp}  >Submit</button>
+               
+                    <div className='bg-dark'>
+
+                    <button type="submit" className="btn  btn-primary"  onClick={handleSignUp}  >Sign in</button>
+                    </div>
                 </form>
             </div>
         </div>

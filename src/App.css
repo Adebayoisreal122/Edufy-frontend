@@ -3,13 +3,17 @@
 
 
 *{
-  background-color: #dadfe9;
+  background-color: #bebfc2;
   color: rgb(17, 17, 17);
   
 }
 .navi{
   background: none !important;
 }
+.nav-item{
+  background-color: rgba(17, 16, 16, 0.062);
+}
+
 .navbar{
   color: white;
 position: fixed;

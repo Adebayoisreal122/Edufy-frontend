@@ -39,16 +39,18 @@ const Home = () => {
           </div>
         </div>
       </div>
-
+<div>
+  <center><h1 className='my-4'>Courses offered in Edufy</h1></center>
+</div>
       <div className='container'>
       <div className='row'>
         <div className='col-md-4 mb-4'>
           <div className="card">
             <img src="/images/webdev.webp" className="card-img-top" alt=""/>
             <div className="card-body">
-              <h5 className="card-title">Card title</h5>
+              <h5 className="card-title">Web Development</h5>
               <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" className="btn btn-outline-primary">Go somewhere</a>
+              <a href="#" className="btn btn-outline-primary">Apply</a>
             </div>
           </div>
         </div>
@@ -56,9 +58,9 @@ const Home = () => {
           <div className="card">
             <img src="/images/data.webp" className="card-img-top" alt=""/>
             <div className="card-body">
-              <h5 className="card-title">Card title</h5>
+              <h5 className="card-title">Data Analytics</h5>
               <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" className="btn btn-outline-primary">Go somewhere</a>
+              <a href="#" className="btn btn-outline-primary">Apply</a>
             </div>
           </div>
         </div>
@@ -66,7 +68,7 @@ const Home = () => {
           <div className="card">
             <img src="/images/graphic.webp" className="card-img-top" alt=""/>
             <div className="card-body">
-              <h5 className="card-title">Card title</h5>
+              <h5 className="card-title">Graphic Design</h5>
               <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               <a href="#" className="btn btn-outline-primary">Apply</a>
             </div>
@@ -76,7 +78,7 @@ const Home = () => {
           <div className="card">
             <img src="/images/robot.webp" className="card-img-top" alt=""/>
             <div className="card-body">
-              <h5 className="card-title">Card title</h5>
+              <h5 className="card-title">Robotics</h5>
               <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               <a href="#" className="btn btn-outline-primary">Apply</a>
             </div>
@@ -86,7 +88,7 @@ const Home = () => {
           <div className="card">
             <img src="/images/cyber.webp" className="card-img-top" alt=""/>
             <div className="card-body">
-              <h5 className="card-title">Card title</h5>
+              <h5 className="card-title">Cyber Security</h5>
               <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               <a href="#" className="btn btn-outline-primary">Apply</a>
             </div>
