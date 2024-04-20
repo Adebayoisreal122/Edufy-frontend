@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 
 const Studentsignin = () => {
 
-let URL = "http://localhost:3000/usersignin";
+let URL = "http://localhost:3200/user/usersignin";
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
   
     const handleSignIn = () => {
-      axios.post('/api/signin', { email, password })
+      axios.post(URL, { email, password })
         .then(response => {
-          // Handle successful sign-in, e.g., redirect to dashboard
           console.log(response.data.message);
+          Navigate('/student');
         })
         .catch(error => {
           // Handle sign-in error, e.g., show an error message to the user

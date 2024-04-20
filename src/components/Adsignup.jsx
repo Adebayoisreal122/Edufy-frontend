@@ -6,7 +6,8 @@ import { Link } from 'react-router-dom';
 
 const Adsignup = () => {
 
-  let URL = "http://localhost:4000/register";
+  let URL = "http://localhost:3200/admin/adminsignin";
+  
   const [firstName, setFirstName] = useState("");
   const [secondName, setSecondName] = useState("");
   const [userName, setUserName] = useState("");
@@ -34,12 +35,11 @@ const handleSubmit = (e) => {
     <div className="row  justify-content-center">
         <div className=" col-lg-6">
             <div className="position-relative border bg-dark border-info p-3 rounded rounded-4">
-                <h1 className='text-center bg-dark text-light  mb-4'>Sign Up here</h1>
+                
                 <center className='bg-dark'>
 
                 <form  onSubmit={handleSubmit} className="form bg-dark">
-            <p className="title bg-dark">Register </p>
-            <p className="message bg-dark text-light">Signup now and get full access to our app. </p>
+                <h1 className='text-center bg-dark title text-light  mb-4'>Sign Up here</h1>
                 <div className=" d-flex bg-dark gap-3">
                 <label className='bg-dark'>
                     <input name="firstName" required="" placeholder="" value={firstName} type="text" onChange={(e) => setFirstName (e.target.value)} className=" bg-dark input"/>
@@ -69,7 +69,7 @@ const handleSubmit = (e) => {
             </label>
             <button type="submit"  className="submit">Submit</button>
             <div className=" bg-dark form-check">
-                        <p className='bg-dark text-light'>You don't have an account? <Link to={"/adminsignup"} className='bg-dark '>Sign up here</Link></p>
+                        <p className='bg-dark text-light'>Already have an account? <Link to={"/adminsignin"} className='bg-dark '>Sign in here</Link></p>
                     </div>
         </form>
                 </center>

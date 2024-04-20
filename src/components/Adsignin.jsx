@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 
 const Adsignin = () => {
 
-  let URL = "http://localhost:3000/adminsignin";
+  let URL = "http://localhost:3200/admin/adminsignin";
 
 
   const [email, setEmail] = useState('');
@@ -15,6 +15,7 @@ const Adsignin = () => {
         .then(response => {
           // Handle successful sign-in, e.g., redirect to dashboard
           console.log(response.data.message);
+          Navigate('/admin');
         })
         .catch(error => {
           // Handle sign-in error, e.g., show an error message to the user
@@ -48,7 +49,7 @@ const Adsignin = () => {
                    
 
                     <div className=" bg-dark form-check">
-                        <p className='bg-dark text-light'>You don't have an account? <Link to={"/adminsignup"} className='bg-dark '>Sign up here</Link></p>
+                        <p className='bg-dark text-light'>You don't have an account? <Link to={"/adminsignup"} className='bg-dark '>Sign in here</Link></p>
                     </div>
                
                     <div className='bg-dark'>

@@ -220,3 +220,6 @@ position: fixed;
   background-color: rgb(56, 90, 194);
 }
 
+.card{
+  border: none;
+}
