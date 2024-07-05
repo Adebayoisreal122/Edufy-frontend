@@ -1,21 +1,26 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Link, Navigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Adsignin = () => {
 
-  let URL = "http://localhost:3200/admin/adminsignin";
+  const URL = "http://localhost:4000/admin/login";
+  const navigate = useNavigate();
+
 
 
   const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
   
-    const handleSignIn = () => {
+    const handleSignIn = (e) => {
+      e.preventDefault();
       axios.post(URL, { email, password })
         .then(response => {
-          // Handle successful sign-in, e.g., redirect to dashboard
-          console.log(response.data.message);
-          Navigate('/admin');
+          if (response.data.status === 200) {
+            // Handle successful login, e.g., redirect to admin dashboard
+            console.log('Admin ID:', response.data.adminId);
+            navigate('/admin');
+          }
         })
         .catch(error => {
           // Handle sign-in error, e.g., show an error message to the user
@@ -39,12 +44,12 @@ const Adsignin = () => {
                 <form className='bg-dark'>
                     <div className="mb-3 bg-dark">
                         <label htmlFor="exampleInputEmail1" className=" bg-dark text-light form-label" onChange={e => setEmail(e.target.value)} >Email address</label>
-                        <input type="email" className=" bg-dark form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+                        <input type="email" className=" text-light bg-dark form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
                         <div id="emailHelp" className=" bg-dark  text-info form-text">We'll never share your email with anyone else.</div>
                     </div>
                     <div className=" bg-dark mb-3">
                         <label htmlFor="exampleInputPassword1" className=" bg-dark form-label"  onChange={e => setPassword(e.target.value)}  >Password</label>
-                        <input type="password" className=" bg-dark form-control" id="exampleInputPassword1"/>
+                        <input type="password" className=" text-light bg-dark form-control" id="exampleInputPassword1"/>
                     </div>
                    
 

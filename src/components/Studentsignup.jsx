@@ -38,31 +38,31 @@ const handleSubmit = (e) => {
 <form  onSubmit={handleSubmit} className="form bg-dark">
 <h1 className='text-center bg-dark title text-light  mb-4'>Sign Up here</h1>
 
-<div className=" d-flex bg-dark gap-3">
+<div className="text-light d-flex bg-dark gap-3">
 <label className='bg-dark'>
-    <input name="firstName" required="" placeholder="" value={firstName} type="text" onChange={(e) => setFirstName (e.target.value)} className=" bg-dark input"/>
+    <input name="firstName" required="" placeholder="" value={firstName} type="text" onChange={(e) => setFirstName (e.target.value)} className="text-light bg-dark input"/>
     <span className='bg-dark text-light'>Firstname</span>
 </label>
 
 <label className='bg-dark'>
-    <input name="secondName" required="" placeholder="" value={secondName} type="text" onChange={(e) => setSecondName (e.target.value)} className=" bg-dark input"/>
+    <input name="secondName" required="" placeholder="" value={secondName} type="text" onChange={(e) => setSecondName (e.target.value)} className="text-light bg-dark input"/>
     <span className='bg-dark text-light'>Lastname</span>
 </label>
 
 </div>  
 
 <label className='bg-dark'>
-<input name="userName" required="" placeholder="" value={userName} type="text" onChange={(e) => setUserName (e.target.value)} className="bg-dark input"/>
+<input name="userName" required="" placeholder="" value={userName} type="text" onChange={(e) => setUserName (e.target.value)} className="bg-dark text-light input"/>
 <span className='bg-dark text-light'>Username</span>
 </label> 
 
 <label className='bg-dark'>
-<input name="email" required="" placeholder="" value={email} type="email" onChange={(e) => setEmail (e.target.value)} className="bg-dark input"/>
+<input name="email" required="" placeholder="" value={email} type="email" onChange={(e) => setEmail (e.target.value)} className="bg-dark text-light input"/>
 <span className='bg-dark text-light'>Email</span>
 </label> 
 
 <label className='bg-dark'>
-<input name="password" required="" placeholder="" value={password} type="password" onChange={(e) => setPassword (e.target.value)} className="bg-dark input"/>
+<input name="password" required="" placeholder="" value={password} type="password" onChange={(e) => setPassword (e.target.value)} className="bg-dark text-light input"/>
 <span className='bg-dark text-light'>Password</span>
 </label>
 <button type="submit"  className="submit">Submit</button>

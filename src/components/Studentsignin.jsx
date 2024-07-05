@@ -4,7 +4,7 @@ import { Link, Navigate } from 'react-router-dom';
 
 const Studentsignin = () => {
 
-let URL = "http://localhost:3200/user/usersignin";
+let URL = "http://localhost:3200/register";
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
   
