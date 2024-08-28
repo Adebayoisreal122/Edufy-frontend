@@ -19,10 +19,25 @@ const Home = () => {
               <p className='hom text-light'>Start, switch, or advance your career with more than 6,900 courses, Professional Certificates, and degrees from world-class universities and companies.</p>
             </div>
           </div>
-          <div className='navi'>
-            <div className='btn btn-outline-primary m-5'>
-                Get started
-            </div>
+          <div className='navi container'>
+          <button className="cssbuttons-io-button m-5 align-items-center">
+  Get started
+  <div class="icon">
+    <svg
+      height="24"
+      width="24"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M0 0h24v24H0z" fill="none"></path>
+      <path
+        d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+        fill="currentColor"
+      ></path>
+    </svg>
+  </div>
+</button>
+
           </div>
         </div>
       </div>

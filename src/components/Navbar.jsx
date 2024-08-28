@@ -37,7 +37,7 @@ const Navbar = () => {
           </a>
           <ul className={`dropdown-menu navi ${isDropdownOpen ? 'show' : ''} bg-dark`}>
           <li><Link to={"/studentsignin"} className="dropdown-item  bg-dark text-light" href="#">Student</Link></li>
-            <li><Link to={"/adminsignin"} className="dropdown-item  bg-dark text-light" href="#">Admin</Link></li>
+            <li><Link to={"/adminsignin"} className="dropdown-item  bg-dark text-light" href="#">Staff</Link></li>
           </ul>
         </li>
       </ul>
