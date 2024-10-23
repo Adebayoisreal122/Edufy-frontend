@@ -7,40 +7,34 @@ const Home = () => {
 
   return (
     <>
- <div className='homi p-5 '>
-        <video autoPlay muted loop id="video-background">
-          <source src={'/videos/file.mp4'} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <div className="container-fluid text-center gradient-overlay">
-          <div className="row hom align-items-center">
-            <div className="col-12 p-5 text-light learn hom">
-              <h1 className='hom'>Learn today’s most in-demand skills with our free online courses</h1>
-              <p className='hom text-light'>Start, switch, or advance your career with more than 6,900 courses, Professional Certificates, and degrees from world-class universities and companies.</p>
-            </div>
-          </div>
-          <div className='navi container'>
+<div className='homi p-5'>
+  <img src="/images/background.png" alt="" className='back-image' />
+  <div className="container-fluid text-center gradient-overlay">
+    <div className="container-fluid home">
+      <div className="row hom">
+        <div className="col-12 col-md-6 p-5 text-light learn hom">
+          <h1 className="hom">Learn today’s most in-demand skills with our free online courses</h1>
+          <p className="hom text-light">
+            Start, switch, or advance your career with more than 6,900 courses, Professional Certificates, and degrees from world-class universities and companies.
+          </p>
           <button className="cssbuttons-io-button m-5 align-items-center">
-  Get started
-  <div class="icon">
-    <svg
-      height="24"
-      width="24"
-      viewBox="0 0 24 24"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path d="M0 0h24v24H0z" fill="none"></path>
-      <path
-        d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
-        fill="currentColor"
-      ></path>
-    </svg>
-  </div>
-</button>
-
-          </div>
+        Get started
+        <div className="icon">
+          <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor"></path>
+          </svg>
+        </div>
+      </button>
+        </div>
+        <div className="col-12 col-md-6 p-5 text-light hom">
+          <img src="/images/online-school.svg" alt="" className="img-fluid" />
         </div>
       </div>
+    </div>
+  </div>
+</div>
+
 
       <div className='container-fluid  w-85'>
         <div className='row'>

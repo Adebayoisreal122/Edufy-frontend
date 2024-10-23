@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
 
 const Adsignin = () => {
-    const URL = "http://localhost:4200/admin/login";
+    const URL = "https://new-edufy-backend.onrender.com/admin/login";
     const navigate = useNavigate();
 
     const [adminId, setAdminId] = useState('');
@@ -36,7 +36,7 @@ const Adsignin = () => {
         <div className="container my-5">
             <div className="row justify-content-center">
                 <div className="col-lg-6">
-                    <div className="position-relative border bg-dark border-info p-5 rounded rounded-4">
+                    <div className="position-relative border bg-dark border-primary shadow shadow-lg p-5 rounded rounded-4">
                         <h1 className='text-center bg-dark text-light mb-4'>Sign In here</h1>
                         
                         <form className='bg-dark' onSubmit={handleSignIn}>

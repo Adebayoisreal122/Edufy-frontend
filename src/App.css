@@ -3,10 +3,15 @@
 
 
 *{
-  background-color: #6383e4;
+  
   color: rgb(17, 17, 17);
   
 }
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%2825, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
 .navi{
   background: none !important;
 }
@@ -47,19 +52,27 @@ position: fixed;
 
 
 
-
 .homi {
   position: relative;
-  overflow: hidden;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
-#video-background {
+.home {
+padding-top: 200px;
+}
+
+.back-image {
   position: absolute;
   top: 0;
   left: 0;
-  min-width: 100%;
-  min-height: 100%;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover; /* Ensures the image covers the container without stretching */
+  z-index: 0;
 }
 
 .gradient-overlay {
@@ -68,38 +81,70 @@ position: fixed;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.4) 100%);
+  background: linear-gradient(180deg, rgba(22, 22, 22, 0.37) 0%, rgba(11, 55, 197, 0.5) 100%);
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.learn{
+
+.learn {
   margin-top: 150px;
+  z-index: 2;
 }
 
+.img-fluid {
+  max-width: 100%;
+  height: 450px;
+  z-index: 2;
+}
 
-
+.navi {
+  z-index: 2;
+}
 
 @media screen and (max-width: 768px) {
   .homi {
-    background-size: auto; 
-  }
-  .learn{
-    margin-top: 50px;
+    background-size: auto;
   }
   
+  .img-fluid {
+   display: none;
+  }
+  .learn {
+    margin-top: 50px;
+  }
+
+  .navi {
+    margin-top: 20px;
+  }
 }
 
 @media screen and (max-width: 425px) {
   .homi {
-    background-size: auto; /* Adjust background size for smaller screens */
-  }
-  .learn{
-    margin-top: 50px;
+    height: auto; /* Adjust height for smaller screens */
   }
   
+  .img-fluid {
+    display: none;
+   }
+  .learn {
+    margin-top: 30px;
+  }
+
+  .navi {
+    margin-top: 15px;
+  }
 }
 
-.hom {background: none;
-      
+@media (max-width: 768px) {
+  .back-image {
+    min-height: 100%; /* Set to 100% to handle smaller screens effectively */
+  }
+}
+
+.hom {
+  background: none;
 }
 
 

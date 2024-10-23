@@ -3,11 +3,13 @@ import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
 
 const Studentsignup = () => {
-  const URL = "http://localhost:4200/user/register";
+  const URL = "https://new-edufy-backend.onrender.com/user/register";
   const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState(""); // Changed from secondName to lastName
+  const [lastName, setLastName] = useState(""); 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
   const navigate = useNavigate();
   
   const handleSubmit = (e) => {
@@ -16,11 +18,20 @@ const Studentsignup = () => {
       firstName, lastName, email, password
     })
     .then((res) => {
-      console.log(res.data.message);
-      navigate('/studentsignin');
+      // console.log(res.data.message);
+      setSuccessMessage("Registration successful! Redirecting...");
+      setErrorMessage("There is an error in registration");
+      setTimeout(() => {  
+        navigate('/studentsignin');
+      }, 2000);
+
+
     })
     .catch((err) => {
       console.error(err.response?.data?.message || 'Registration failed');
+
+      setErrorMessage("Registration failed. Please try again.");
+      setSuccessMessage("");
     });
   };
 
@@ -32,6 +43,9 @@ const Studentsignup = () => {
             <center className="bg-dark">
               <form onSubmit={handleSubmit} className="form bg-dark">
                 <h1 className="text-center bg-dark title text-light mb-4">Sign Up here</h1>
+
+                {successMessage && <p className="text-success text-center">{successMessage}</p>}
+                {errorMessage && <p className="text-danger text-center">{errorMessage}</p>}
 
                 <div className="text-light d-flex bg-dark gap-3">
                   <label className="bg-dark">

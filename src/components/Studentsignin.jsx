@@ -3,9 +3,11 @@ import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
 
 const Studentsignin = () => {
-    const URL = "http://localhost:4200/user/login";
+    const URL = "https://new-edufy-backend.onrender.com/user/login";
     const [matricNumber, setMatricNumber] = useState('');
     const [password, setPassword] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
+    const [successMessage, setSuccessMessage] = useState('');
     const navigate = useNavigate();
 
     const handleSignIn = async (e) => {
@@ -13,9 +15,19 @@ const Studentsignin = () => {
         try {
             const response = await axios.post(URL, { matricNumber, password });
             console.log(response.data.message);
-            navigate('/student');
+            setSuccessMessage("Login successful! Redirecting...");
+            setErrorMessage("");
+            setTimeout(() => {
+                // Store token in localStorage if needed
+                localStorage.setItem('token', response.data.token);
+                navigate('/student'); // Adjust the redirect path as needed
+            }, 2000); // Redirect after 2 seconds to show success message
+        
         } catch (error) {
             console.error(error.response?.data?.message || 'Sign-in failed');
+
+            setErrorMessage(error.response?.data?.message || "An error occurred during login.");
+            setSuccessMessage("");
         }
     };
 
@@ -27,6 +39,10 @@ const Studentsignin = () => {
                         <h1 className="text-center bg-dark text-light mb-4">Sign In here</h1>
 
                         <form className="bg-dark" onSubmit={handleSignIn}>
+
+                        {successMessage && <p className="text-success text-center">{successMessage}</p>}
+                        {errorMessage && <p className="text-danger text-center">{errorMessage}</p>}
+
                             <div className="mb-3 bg-dark">
                                 <label htmlFor="matricNumber" className="bg-dark text-light form-label">
                                     Matric Number

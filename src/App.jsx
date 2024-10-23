@@ -11,7 +11,7 @@ import Studentsignin from './components/Studentsignin';
 import Studentsignup from './components/Studentsignup';
 import Admindash from './components/Admindash';
 import Studentdash from './components/Studentdash';
-import Notfound from '../Notfound';
+import Notfound from './components/Notfound';
 
 function App() {
   const [count, setCount] = useState(0)
