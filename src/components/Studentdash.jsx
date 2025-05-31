@@ -1,8 +1,38 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom';
+import {getDashboard} from '../services/authservice';
 
 const Studentdash = () => {
   const [selectedSection, setSelectedSection] = useState('dashboard');
+  const [student, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState('');
+
+
+  useEffect(() => {
+    getDashboard()
+      .then((response) => {
+        setUser(response.data.user);
+        setLoading(false);
+      })
+      .catch((err) => {
+        setError('Failed to load dashboard');
+        console.error(err);
+        setLoading(false);
+      });
+  }, []);
+
+
+  const navigate = useNavigate();
+
+const handleLogout = () => {
+  localStorage.removeItem('token'); // Clear the JWT token
+  navigate('/studentsignin');       // Redirect to sign-in page
+};
+
+    if (loading) return <p>Loading dashboard...</p>;
+  if (error) return <p style={{ color: 'red' }}>{error}</p>;
+  
 
   const renderSection = () => {
     switch (selectedSection) {
@@ -10,7 +40,14 @@ const Studentdash = () => {
         return (
           <div className='container p-5 shadow-lg p-3 mb-5 bg-body rounded'>
           
-      <h1>Welcome to Dashboard</h1>
+      <h1>Welcome to your Dashboard</h1>
+      <strong>Student Information:</strong>
+      <ul>
+            <li><strong>First Name:</strong> {student.firstName}</li>
+            <li><strong>Last Name:</strong> {student.lastName}</li>
+            <li><strong>Email:</strong> {student.email}</li>
+            <li><strong>Matric Number</strong> {student.matricNumber} </li>
+      </ul>
 
           </div>
         );
@@ -63,9 +100,7 @@ const Studentdash = () => {
             </button>
           </li>
           <li className=" bg-light nav-item">
-            <Link className="nav-link" to="/logout">
-              Logout
-            </Link>
+<button className=" btn btn-outline-warning  " onClick={handleLogout}>Logout</button>
           </li>
         </ul>
       </div>
@@ -73,7 +108,7 @@ const Studentdash = () => {
 
     <main className="col-md-9  ms-sm-auto col-lg-10 px-4">
       <div className="d-flex  justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 className="h2">Welcome!</h1>
+        <h1 className="h2">Welcome! {student.firstName} {student.lastName}</h1>
       </div>
 
       {renderSection()}

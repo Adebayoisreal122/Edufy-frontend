@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
 
 const Adsignin = () => {
-    const URL = "https://new-edufy-backend.onrender.com/admin/login";
+    const URL = "http://localhost:4200/admin/login";
     const navigate = useNavigate();
 
     const [adminId, setAdminId] = useState('');

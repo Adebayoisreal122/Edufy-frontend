@@ -29,7 +29,7 @@ const Navbar = () => {
           <a className="nav-link nat text-light" aria-current="page" href="#">About us</a>
         </li>
         <li className="nav-item ">
-          <a className="nav-link navi text-light" href="#"> Our Courses</a>
+          <Link className="nav-link navi text-light" to="/home#courses"> Our Courses</Link>
         </li>
         <li className="nav-item dropdown" onMouseEnter={handleDropdownToggle} onMouseLeave={handleDropdownClose}>
           <a className="nav-link navi dropdown-toggle bg-dark text-light" href="#" role="button" aria-expanded={isDropdownOpen ? 'true' : 'false'}>

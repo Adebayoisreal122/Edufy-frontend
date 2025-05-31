@@ -12,6 +12,7 @@ import Studentsignup from './components/Studentsignup';
 import Admindash from './components/Admindash';
 import Studentdash from './components/Studentdash';
 import Notfound from './components/Notfound';
+import Forgot from './components/Forgot';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -35,6 +36,7 @@ function App() {
 
         <Route path='/studentsignup' element={<Studentsignup/>}/>
         <Route path='/studentsignin' element={<Studentsignin/>}/>
+        <Route path='/forgotpassword' element={<Forgot/>}/>
         <Route path='/student' element={<Studentdash/>}/>
 
 

@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
 
 const Studentsignin = () => {
-    const URL = "https://new-edufy-backend.onrender.com/user/login";
+    const URL = "http://localhost:4200/user/login";
     const [matricNumber, setMatricNumber] = useState('');
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
@@ -18,11 +18,11 @@ const Studentsignin = () => {
             setSuccessMessage("Login successful! Redirecting...");
             setErrorMessage("");
             setTimeout(() => {
-                // Store token in localStorage if needed
                 localStorage.setItem('token', response.data.token);
-                navigate('/student'); // Adjust the redirect path as needed
-            }, 2000); // Redirect after 2 seconds to show success message
-        
+                navigate('/student'); 
+            }, 2000); 
+        localStorage.setItem('student', JSON.stringify(response.data.student));
+
         } catch (error) {
             console.error(error.response?.data?.message || 'Sign-in failed');
 
@@ -81,7 +81,7 @@ const Studentsignin = () => {
                                     Sign in
                                 </button>
                                 <div className="bg-dark">
-                            <Link  className="bg-dark" to='/user/forgot'>forget password?</Link>
+                            <Link  className="bg-dark" to='/forgotpassword'>forget password?</Link>
                                   
                         </div>
                             </div>

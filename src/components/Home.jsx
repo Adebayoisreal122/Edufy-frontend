@@ -1,9 +1,26 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 
 
 
 
 const Home = () => {
+
+
+
+
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.querySelector(location.hash);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
+
+
 
   return (
     <>
@@ -17,14 +34,9 @@ const Home = () => {
           <p className="hom text-light">
             Start, switch, or advance your career with more than 6,900 courses, Professional Certificates, and degrees from world-class universities and companies.
           </p>
-          <button className="cssbuttons-io-button m-5 align-items-center">
-        Get started
-        <div className="icon">
-          <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor"></path>
-          </svg>
-        </div>
+          <button className=" btn btn-outline-primary m-5 text-light align-items-center">
+            <Link to={"/studentsignin"} className='text-light text-decoration-none'>Get started</Link>
+        
       </button>
         </div>
         <div className="col-12 col-md-6 p-5 text-light hom">
@@ -48,10 +60,10 @@ const Home = () => {
           </div>
         </div>
       </div>
-<div>
+<div id='courses'>
   <center><h1 className='my-4'> Our Courses</h1></center>
 </div>
-      <div className='container'>
+      <div  className='container'>
       <div className='row'>
         <div className='col-md-4 mb-4'>
           <div className="card">

@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
 
 const Studentsignup = () => {
-  const URL = "https://new-edufy-backend.onrender.com/user/register";
+  const URL = "http://localhost:4200/user/register";
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState(""); 
   const [email, setEmail] = useState("");
