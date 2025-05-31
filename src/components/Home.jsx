@@ -36,7 +36,7 @@ const Home = () => {
         <h1 className="mb-4">
           Learn today’s most in-demand skills with our free online courses
         </h1>
-        <p className="mb-4">
+        <p className="mb-4 text-light fw-normal">
           Start, switch, or advance your career with more than 6,900 courses, Professional Certificates, and degrees from world-class universities and companies.
         </p>
         <Link to="/studentsignin" className="btn btn-outline-light">
