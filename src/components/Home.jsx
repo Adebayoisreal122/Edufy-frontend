@@ -24,24 +24,29 @@ const Home = () => {
 
   return (
     <>
-<div className='homi p-5'>
-  <img src="/images/background.png" alt="" className='back-image' />
-  <div className="container-fluid text-center gradient-overlay">
-    <div className="container-fluid home">
-      <div className="row hom">
-        <div className="col-12 col-md-6 p-5 text-light learn hom">
-          <h1 className="hom">Learn today’s most in-demand skills with our free online courses</h1>
-          <p className="hom text-light">
-            Start, switch, or advance your career with more than 6,900 courses, Professional Certificates, and degrees from world-class universities and companies.
-          </p>
-          <button className=" btn btn-outline-primary m-5 text-light align-items-center">
-            <Link to={"/studentsignin"} className='text-light text-decoration-none'>Get started</Link>
-        
-      </button>
-        </div>
-        <div className="col-12 col-md-6 p-5 text-light hom">
-          <img src="/images/online-school.svg" alt="" className="img-fluid" />
-        </div>
+<div className='homi position-relative'>
+  {/* Background Image */}
+  <img src="/images/background.png" alt="" className='back-image position-absolute w-100 h-100 object-fit-cover' />
+
+  {/* Overlay Content */}
+  <div className="container-fluid text-center gradient-overlay position-relative z-1">
+    <div className="row align-items-center min-vh-100">
+      {/* Left Content */}
+      <div className="col-12 col-md-6 p-5 text-light text-start">
+        <h1 className="mb-4">
+          Learn today’s most in-demand skills with our free online courses
+        </h1>
+        <p className="mb-4">
+          Start, switch, or advance your career with more than 6,900 courses, Professional Certificates, and degrees from world-class universities and companies.
+        </p>
+        <Link to="/studentsignin" className="btn btn-outline-light">
+          Get started
+        </Link>
+      </div>
+
+      {/* Right Image */}
+      <div className="col-12 col-md-6 p-5">
+        <img src="/images/online-school.svg" alt="Online School" className="img-fluid" />
       </div>
     </div>
   </div>

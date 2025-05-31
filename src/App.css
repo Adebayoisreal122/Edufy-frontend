@@ -53,11 +53,6 @@ position: fixed;
 
 
 .homi {
-  position: relative;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   overflow: hidden;
 }
 
@@ -66,26 +61,16 @@ padding-top: 200px;
 }
 
 .back-image {
-  position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100vh;
-  object-fit: cover; /* Ensures the image covers the container without stretching */
   z-index: 0;
+  object-fit: cover;
+  filter: brightness(0.4);
 }
 
 .gradient-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(180deg, rgba(22, 22, 22, 0.37) 0%, rgba(11, 55, 197, 0.5) 100%);
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  background: linear-gradient(rgba(13, 181, 223, 0.575), rgba(10, 7, 185, 0.596));
+  min-height: 100vh;
 }
 
 .learn {
