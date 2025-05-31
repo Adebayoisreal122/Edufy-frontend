@@ -18,7 +18,7 @@ const Navbar = () => {
     <div className='navba'>
 
     <nav className="navbar navbar-expand-lg  text-light fixed-top" >
-  <div className="container-fluid navbar justify-content-center">
+  <div className="container-fluid navbar ">
     <h1 className="navbar-brand  ms-5" href="#">Edufy</h1>
     <button className="navbar-toggler navi text-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
