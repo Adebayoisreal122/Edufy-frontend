@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const URL = "http://localhost:4200/user/dashboard";
+const URL = "https://new-edufy-backend.onrender.com/user/dashboard";
 
 export const getDashboard = async () => {
 

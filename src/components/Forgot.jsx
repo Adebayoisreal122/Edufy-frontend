@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 function Forgot() {
 
-    const URL = "http://localhost:4200/user/login";
+    const URL = "https://new-edufy-backend.onrender.com/user/login";
 
     const [forgotEmail, setforgotEmail] = useState('');
     const [errorMessage, setErrorMessage] = useState('');

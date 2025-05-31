@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Adsignup = () => {
     const navigate = useNavigate();
-    const URL = "http://localhost:4200/admin/register";
+    const URL = "https://new-edufy-backend.onrender.com/admin/register";
 
     const [firstName, setFirstName] = useState("");
     const [secondName, setSecondName] = useState("");
